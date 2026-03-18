@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState, useRef, use } from "react";
 import useSocket from "../socket/socket";
 import peer from "../rtc/connect";
 const Roompage = () => {
-  const socket = useCallback(useSocket(), []);
+const socket = useSocket();
   console.log(socket);
   const [stream, setStream] = useState(null);
   const [isUserJoined, setIsUserJoined] = useState(false);
@@ -149,7 +149,7 @@ useEffect(() => {
         }}
       >
 
-        <video ref={videoref} autoPlay playsInline width="290" height="400" />
+        <video ref={videoref} autoPlay muted playsInline width="290" height="400" />
       </div>
       <h1>remote stream</h1>
       <div
@@ -157,8 +157,7 @@ useEffect(() => {
           display: remotestream ? "flex" : "none",
           flexDirection: "column",
         }}
-      >
-        
+      > 
         <video ref={remoteref} autoPlay playsInline width="290" height="400" />
       </div>
     </div>
