@@ -4,9 +4,9 @@ class peer {
       iceServers: [
         { urls: "stun:stun.l.google.com:19302" },
         {
-          urls: "free.expressturn.com:3478",
-          username: "000000002089218760",
-          credential: "YpzPwoatLFBaMrcg03+XA00gjXY=",
+          urls: "turn:free.expressturn.com:3478",
+          username: "000000002089219264",
+          credential: "T0FVyW9Zzu7BvJN6lt3MuHevUeA=",
         },
       ],
     });
